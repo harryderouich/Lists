@@ -5,19 +5,32 @@
 
 
 def sorter(names):
-    print(names)
-    changed = True
-    while changed != False:
+    #changed = True
+    #run = True
+    #done = False
+    #while run == True and done != True:
+    for count in range(len(names)):
         for count in range(len(names) - 1):
             if str(names[count][0]) > str(names[count + 1][0]):
                 temp = names[count]
                 names[count] = names[count + 1]
                 names[count + 1] = temp
                 print(names)
-                changed = True
+                #changed = True
             else:
                 names[count] = names[count]
-                changed = False
+                #changed = False
+##        if changed == True:
+##            run = True
+##            changed = False
+##        else:
+##            run = True
+##            done = False
+                
+                
+    print("Finished")
+    for name in names:
+        print(name)
     return names
 
 
@@ -25,9 +38,10 @@ def sorter(names):
 
     
 
-names = ['B','C','E','A', 'D', 'F']
-sorted_names = sorter(names)
+names = ['Frank','Emma','David','Charlie', 'Ben', 'Alex']
+sorter(names)
 #run_again(changed, names, sorted_names)
-
-
+#print("List sorted!")
+#for sorted_name in sorted_names:
+   # print(sorted_name)
 
